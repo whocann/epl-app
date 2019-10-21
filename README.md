@@ -3,7 +3,7 @@ an experimental app about English Premier League using SAP Cloud Platform Progra
 
 https://blogs.sap.com/2019/10/19/build-an-english-premier-league-app-with-sap-cloud-application-programming-model-part-1-the-story-begins/
 
-git clone
+git clone https://github.com/whocann/epl-app.git
 
 npm install
 
