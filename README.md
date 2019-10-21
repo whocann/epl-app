@@ -1,0 +1,10 @@
+# epl-app
+an experimental app about English Premier League using SAP Cloud Platform Programming Model
+
+https://blogs.sap.com/2019/10/19/build-an-english-premier-league-app-with-sap-cloud-application-programming-model-part-1-the-story-begins/
+
+git clone
+
+npm install
+
+cds deploy --to sqlite:db/epl.db && cds watch .
