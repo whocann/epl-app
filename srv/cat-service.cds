@@ -1,4 +1,4 @@
-using com.epl as db from '../db/data-model';
+using com.epl as db from '../db/index';
 
 service CatalogService {
     @readonly
