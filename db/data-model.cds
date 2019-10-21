@@ -11,6 +11,6 @@ entity Matches: cuid, managed {
   matchDate: Date;
   homeTeam : Association to Teams;
   awayTeam: Association to Teams;
-  homeTeamScore: String(6);
-  awayTeamScore: String(5);
+  homeTeamScore: Integer;
+  awayTeamScore: Integer;
 }
