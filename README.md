@@ -8,3 +8,5 @@ git clone https://github.com/whocann/epl-app.git
 npm install
 
 cds deploy --to sqlite:db/epl.db && cds watch .
+
+http://localhost:4004
