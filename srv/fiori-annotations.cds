@@ -1,4 +1,4 @@
-using CatalogService from './cat-service';
+using com.epl.CatalogService from './cat-service';
 
 annotate CatalogService.Matches with @(
   UI:{

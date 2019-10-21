@@ -1,4 +1,6 @@
-using com.epl as db from '../db/data-model';
+namespace com.epl;
+
+using com.epl as db from '../db/index';
 
 service CatalogService {
     @readonly
