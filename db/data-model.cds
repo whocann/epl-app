@@ -1,16 +1,18 @@
 namespace com.epl;
 
-using { managed, cuid } from '@sap/cds/common';
+using { managed, cuid, sap.common.CodeList } from '@sap/cds/common';
 
-entity Teams : managed {
-  key ID : Integer;
-  name : String(30);
+type Team : Association to Teams;
+
+entity Teams : managed, CodeList {
+  key ID : Integer ;
+  //name : localized String(255) @title:'{i18n>homeTeam}';
 }
 
 entity Matches: cuid, managed {
   matchDate: Date;
-  homeTeam : Association to Teams;
-  awayTeam: Association to Teams;
+  homeTeam : Team;
+  awayTeam: Team;
   homeTeamScore: Integer;
   awayTeamScore: Integer;
 }
