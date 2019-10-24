@@ -10,3 +10,6 @@ npm install
 cds deploy --to sqlite:db/epl.db && cds watch .
 
 http://localhost:4004
+
+
+http://localhost:4004/$fiori-preview/?service=com.epl.CatalogService&entity=Matches&sap-language=zh_CN
