@@ -5,7 +5,7 @@
   "repository": "<Add your repository here>",
   "license": "ISC",
   "dependencies": {
-    "@sap/cds": "^3.17.4",
+    "@sap/cds": "^3.18.1",
     "express": "^4.17.1"
   },
   "engines": {
@@ -29,7 +29,10 @@
     "requires": {
       "db": {
         "kind": "sqlite",
-        "model": "db",
+        "model": [
+          "db",
+          "srv"
+        ],
         "credentials": {
           "database": "db/epl.db"
         }
