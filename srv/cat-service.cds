@@ -6,11 +6,7 @@ service CatalogService {
     @readonly
     entity Teams as projection on db.Teams;
     @readonly 
-    entity Matches as select from db.Matches {
-        *,
-        homeTeam.name as homeTeamName,
-        awayTeam.name as awayTeamName
-    }
+    entity Matches as select from db.Matches
         order by matchDate desc;
 }
 

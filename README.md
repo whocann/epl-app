@@ -13,3 +13,5 @@ http://localhost:4004
 
 
 http://localhost:4004/$fiori-preview/?service=com.epl.CatalogService&entity=Matches&sap-language=zh_CN
+
+http://localhost:4004/$fiori-preview/?service=com.epl.CatalogService&entity=Matches&sap-language=de_DE
