@@ -1,21 +1,21 @@
-﻿ID,name
-1,Arsenal
-2,Aston Villa
-3,Bournemouth
-4,Brighton
-5,Burnley
-6,Chelsea
-7,Crystal Palace
-8,Everton
-9,Leicester
-10,Liverpool
-11,Man City
-12,Man United
-13,Newcastle
-14,Norwich
-15,Sheffield United
-16,Southampton
-17,Tottenham
-18,Watford
-19,West Ham
-20,Wolves
+﻿ID,name,descr
+1,Arsenal,
+2,Aston Villa,
+3,Bournemouth,
+4,Brighton,
+5,Burnley,
+6,Chelsea,
+7,Crystal Palace,
+8,Everton,
+9,Leicester,
+10,Liverpool,
+11,Man City,
+12,Man United,
+13,Newcastle,
+14,Norwich,
+15,Sheffield United,
+16,Southampton,
+17,Tottenham,
+18,Watford,
+19,West Ham,
+20,Wolves,
