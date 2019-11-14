@@ -5,8 +5,9 @@
   "repository": "<Add your repository here>",
   "license": "ISC",
   "dependencies": {
-    "@sap/cds": "^3.18.1",
-    "express": "^4.17.1"
+    "@sap/cds": "^3.18.3",
+    "express": "^4.17.1",
+    "sqlite3": "^4.1.0"
   },
   "engines": {
     "node": "^8.9"
@@ -39,8 +40,5 @@
       }
     }
   },
-  "devDependencies": {
-    "@sap/cds-dk": "^1.0.2",
-    "sqlite3": "^4.1.0"
-  }
+  "devDependencies": {}
 }

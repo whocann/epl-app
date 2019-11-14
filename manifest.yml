@@ -1,0 +1,7 @@
+applications:
+  - name: sap-cap-epl
+    buildpacks:
+      - nodejs_buildpack
+    memory: 512M
+    command: npm start
+    random-route: true
