@@ -4,15 +4,16 @@ version: 1.0.0
 modules:
   - name: sap-cap-epl-srv
     type: nodejs
-    path: .
+    path: srv
     parameters:
-      memory: 1024M
-      disk-quota: 512M
+      memory: 512M
+      disk-quota: 256M
     provides:
       - name: srv_api
         properties:
           url: ${default-url}
     requires:
+      - name: sap-cap-epl-db-hdi-container
       - name: sap-cap-epl-uaa
 resources:
   - name: sap-cap-epl-uaa
