@@ -9,7 +9,8 @@ entity Teams : managed, CodeList {
   //name : localized String(255) @title:'{i18n>homeTeam}';
 }
 
-entity Matches: cuid, managed {
+entity Matches: managed {
+  key ID: String;
   matchDate: Date;
   homeTeam : Team;
   awayTeam: Team;

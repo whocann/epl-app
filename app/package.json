@@ -1,0 +1,12 @@
+{
+  "name": "epl-app-ui",
+  "dependencies": {
+    "@sap/approuter": "^6.5.1"
+  },
+  "engines": {
+    "node": "^10"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  }
+}

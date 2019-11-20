@@ -6,7 +6,8 @@
   "license": "ISC",
   "dependencies": {
     "@sap/cds": "^3.18.3",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hdb": "^0.17.1"
   },
   "engines": {
     "node": "^8.9"
@@ -15,7 +16,9 @@
     "build": "cds build/all --clean",
     "deploy": "cds deploy",
     "start": "cds run",
-    "watch": "cds deploy --to sqlite:db/epl.db && cds watch ."
+    "watch": "cds deploy --to sqlite:db/epl.db && cds watch .",
+    "build:mta": "cds build/all && mbt build -p=cf",
+    "deploy:cf": "npm run build:mta && cf deploy mta_archives/${npm_package_name}_${npm_package_version}.mtar"
   },
   "files": [
     "srv",
@@ -35,6 +38,9 @@
         ],
         "credentials": {
           "database": "db/epl.db"
+        },
+        "[production]": {
+          "kind": "hana"
         }
       }
     }
