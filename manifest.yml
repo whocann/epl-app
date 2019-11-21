@@ -2,6 +2,11 @@ applications:
   - name: sap-cap-epl
     buildpacks:
       - nodejs_buildpack
-    memory: 512M
+    memory: 256M
+    disk_quota: 256M
     command: npm start
     random-route: true
+#    services:
+#      - <api-access>
+#    env:
+#      apiDest: <api-access>
