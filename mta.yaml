@@ -30,6 +30,7 @@ modules:
       memory: 256M
       disk-quota: 256M
     requires:
+      - name: sap-cap-epl-uaa
       - name: srv_api
         group: destinations
         properties: 
