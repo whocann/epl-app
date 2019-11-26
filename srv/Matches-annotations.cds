@@ -1,6 +1,6 @@
-using com.epl.CatalogService from './cat-service';
+using com.epl.PublicService from './public-service';
 
-annotate CatalogService.Matches with @(
+annotate PublicService.Matches with @(
   UI:{
     Identification: [{ Value: '{i18n>matches}' }],
     SelectionFields: [ 'matchDate','homeTeam_ID','awayTeam_ID' ],
