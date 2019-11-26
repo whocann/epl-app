@@ -1,6 +1,6 @@
-using com.epl.CatalogService from './cat-service';
+using com.epl.PublicService from './public-service';
 
-annotate CatalogService.Teams with @(
+annotate PublicService.Teams with @(
   UI: {
     Identification : [name],
     SelectionFields: [name],
