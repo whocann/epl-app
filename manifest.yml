@@ -2,11 +2,12 @@ applications:
   - name: sap-cap-epl
     buildpacks:
       - nodejs_buildpack
-    memory: 256M
-    disk_quota: 256M
-    command: npm start
+    memory: 512M
+    disk_quota: 600M
+#    command: npm start
     random-route: true
-#    services:
+    services:
+       - sap-cap-epl-db-hdi-container
 #      - <api-access>
 #    env:
 #      apiDest: <api-access>
