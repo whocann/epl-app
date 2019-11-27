@@ -7,6 +7,8 @@ service PublicService {
     entity LeagueTable as select from db.Teams {
         *,
         @Core.Computed
+        0 as rank: Integer,
+        @Core.Computed
         0 as win: Integer,
         @Core.Computed
         0 as draw: Integer,
