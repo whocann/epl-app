@@ -10,7 +10,10 @@
         "node": "^10"
     },
     "scripts": {
-        "start": "cds serve gen/csn.json"
+        "start": "cds serve gen/csn.json",
+        "postinstall": "npm dedupe && node .build.js",
+        "start2": "node ./node_modules/@sap/cds/bin/cds.js serve gen/csn.json",
+        "watch": "nodemon -w . -i node_modules/**,.git/** -e cds -x npm run build"
     },
     "cds": {
         "requires": {

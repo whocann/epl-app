@@ -34,7 +34,8 @@
         "kind": "sqlite",
         "model": [
           "db",
-          "srv"
+          "srv",
+          "index.cds"
         ],
         "credentials": {
           "database": "db/epl.db"

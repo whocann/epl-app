@@ -11,6 +11,7 @@ entity Teams : managed, CodeList {
 
 entity Matches: managed {
   key ID: String;
+  //key ID: cuid;
   matchDate: Date;
   homeTeam : Team;
   awayTeam: Team;
