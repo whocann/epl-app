@@ -1,6 +1,6 @@
-using com.epl.PublicService from './public-service';
+using com.epl.AdminService from './admin-service';
 
-annotate PublicService.Teams with @(
+annotate AdminService.Teams with @(
   UI: {
     Identification : [name],
     SelectionFields: [name],

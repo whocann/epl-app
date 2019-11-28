@@ -1,6 +1,6 @@
-using com.epl.PublicService from './public-service';
+using com.epl.AdminService from './admin-service';
 
-annotate PublicService.Matches with @(
+annotate AdminService.Matches with @(
   UI:{
     Identification: [{ Value: '{i18n>matches}' }],
     SelectionFields: [ 'matchDate','homeTeam_ID','awayTeam_ID' ],

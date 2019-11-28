@@ -1,6 +1,6 @@
 namespace com.epl;
 
-using com.epl as db from '../db/data-model';
+using com.epl as db from '../../db/data-model';
 
 service PublicService {
     @readonly

@@ -1,0 +1,143 @@
+{
+    "_version": "1.8.0",
+    "sap.app": {
+      "id": "match",
+      "type": "application",
+      "title": "Matches",
+      "description": "Preview Application",
+      "dataSources": {
+        "mainService": {
+          "uri": "/catalog/",
+          "type": "OData",
+          "settings": {
+            "odataVersion": "4.0"
+          }
+        }
+      },
+       "-sourceTemplate": {
+          "id": "ui5template.basicSAPUI5ApplicationProject",
+          "-id": "ui5template.smartTemplate",
+          "-version": "1.40.12"
+       }
+    },
+    "sap.ui5": {
+      "dependencies": {
+        "libs": {
+          "sap.fe": {}
+        }
+      },
+      "models": {
+        "": {
+          "dataSource": "mainService",
+          "settings": {
+            "synchronizationMode": "None",
+            "operationMode": "Server",
+            "autoExpandSelect": true,
+            "earlyRequests": true,
+            "groupProperties": {
+              "default": {
+                "submit": "Auto"
+              }
+            }
+          }
+        }
+      },
+      "routing": {
+        "routes": [
+          {
+            "name": "MatchesListRoute",
+            "target": "MatchesListTarget",
+            "pattern": ":?query:"
+          },
+          {
+            "name": "MatchesDetailsRoute",
+            "target": "MatchesDetailsTarget",
+            "pattern": "Matches({key}):?query:"
+          },
+          {
+            "name": "homeTeamRoute",
+            "target": "homeTeamTarget",
+            "pattern": "Matches({key}/homeTeam({key2}):?query:"
+          },
+          {
+            "name": "awayTeamRoute",
+            "target": "awayTeamTarget",
+            "pattern": "Matches({key}/awayTeam({key2}):?query:"
+          }
+        ],
+        "targets": {
+          "MatchesListTarget": {
+            "type": "Component",
+            "id": "MatchesListTarget",
+            "name": "sap.fe.templates.ListReport",
+            "options": {
+              "settings": {
+                "entitySet": "Matches",
+                "navigation": {
+                  "Matches": {
+                    "detail": {
+                      "route": "MatchesDetailsRoute"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "MatchesDetailsTarget": {
+            "type": "Component",
+            "id": "MatchesDetailsTarget",
+            "name": "sap.fe.templates.ObjectPage",
+            "options": {
+              "settings": {
+                "entitySet": "Matches",
+                "navigation": {
+                  "homeTeam": {
+                    "detail": {
+                      "route": "homeTeamRoute"
+                    }
+                  },
+                  "awayTeam": {
+                    "detail": {
+                      "route": "awayTeamRoute"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "homeTeamTarget": {
+            "type": "Component",
+            "id": "homeTeamTarget",
+            "name": "sap.fe.templates.ObjectPage",
+            "options": {
+              "settings": {
+                "entitySet": "epl"
+              }
+            }
+          },
+          "awayTeamTarget": {
+            "type": "Component",
+            "id": "awayTeamTarget",
+            "name": "sap.fe.templates.ObjectPage",
+            "options": {
+              "settings": {
+                "entitySet": "epl"
+              }
+            }
+          }
+        }
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "fullWidth": true
+    },
+    "sap.fiori": {
+      "registrationIds": [],
+      "archeType": "transactional"
+    }
+  }
