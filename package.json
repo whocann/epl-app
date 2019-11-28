@@ -39,6 +39,9 @@
         ],
         "credentials": {
           "database": "db/epl.db"
+        },
+        "[production]": {
+          "kind": "hana"
         }
       }
     }
